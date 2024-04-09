@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height: 100vh;
+}
+.btnBox{
+    width:300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
+.btnBox button{
+    width:120px;
+    height: 60px;
+    font-size: 23px;
+    background: orange;
+    color: white;
+}
+button:hover{
+    opacity: 0.8;
+}
+.map{
+    width:1000px;
+    height: 600px;
+    background-image: url(./imgs/square.png);
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+}
+.map div{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 0px 10px yellow;
+}
+.map .head{
+    background: radial-gradient(#ffc000,#ff4e00);
+}
+.map .body{
+    background: radial-gradient(#fff369,#fa791a);
+}
+.map .food{
+    background: radial-gradient(#a7fa64,#4f8524);
+    animation: foodAnimate 1.5s linear infinite;
+}
+@keyframes foodAnimate{
+    0%{
+        box-shadow: 0px 0px 10px white;
+    }
+    50%{
+        box-shadow: 0px 0px 40px white;
+    }
+    100%{
+        box-shadow: 0px 0px 10px white;
+    }
+}
+
+.modeDialog {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333333ee;
+    animation: pop 0.3s;
+  }
+
+  .mode__dialog__body {
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mode__dialog__body button{
+    width:120px;
+    height: 60px;
+    font-size: 23px;
+    background: orange;
+    color: white;
+  }
+
+
+
+  @keyframes pop {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .deadDialog {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333333ee;
+    animation: pop 0.3s;
+  }
+  .dead__dialog__body {
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: white;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .dead__dialog__body #title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: crimson;
+  }
+  
+  .dead__dialog__body #score{
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+  }
+  .dead__dialog__body button{
+    width:120px;
+    height: 60px;
+    font-size: 23px;
+    background: white;
+    color: black;
+    border: 2px solid black;
+  }
+/* 这个东西如果不写在对话框类的下面，其优先级会被覆盖，这就是‘层叠’的特性。没想到很久以前看的css权威指南里的知识在这里出现了 */
+  .dialog--active {
+    display: block;
+  }

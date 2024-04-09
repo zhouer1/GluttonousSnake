@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="btnBox">
+        <button id="start" class="modeTrigger">开始</button>
+        <button id="pause">暂停</button>
+        <button id="restart">结束</button>
+    </div>
+    <div class="map" id="map">
+
+    </div>
+    <audio id='music'src="./audio/山岸継司 - 鮮烈のリュウ.mp3" autoplay loop></audio>
+
+    <div class="modeDialog">
+      <div class="mode__dialog__body">
+        <div class="modesContainer">
+            <button class="mode__dialog__close" id="easy">简单</button>
+            <button class="mode__dialog__close" id="simple">一般</button>
+            <button class="mode__dialog__close" id="hard">困难</button>
+            <button class="mode__dialog__close" id="ultimate">究极</button>
+            <button class="mode__dialog__close" id="final">终极</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="deadDialog">
+        <div class="dead__dialog__body">
+            <div id="title">你死了！！！</div>
+            <div id="score">你的得分是：</div>
+              <button class="dead__dialog__close" id="check">确定</button>
+        </div>
+    </div>
+</body>
+<script type='module' src="./index.js"></script>
+
+</html>
